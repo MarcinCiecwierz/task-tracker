@@ -28,6 +28,7 @@ To create this appliaction I have used:
 ## Deployment
 
 This project is divided into 2 sections backend and frontend. Both folders have a dockerfile. To combine them and run both files in the same time use docker compose file.
+Also there is volume of database. With run of compose, there will be created a database.
 
 To build use:
 ```
