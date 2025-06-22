@@ -25,7 +25,6 @@ public class CommentController {
     @PostMapping
     public ResponseEntity<?> postComment(@RequestBody RequestNewCommentDTO commentDTO,
                                          @AuthenticationPrincipal Jwt jwt) {
-        System.out.println(commentDTO.getTaskId());
         String sub = jwt.getClaim("sub");
         addNewCommentToTask.addComment(sub, commentDTO);
         return ResponseEntity.status(HttpStatus.CREATED).build();
