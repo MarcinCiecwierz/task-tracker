@@ -29,7 +29,9 @@ pipeline {
         }
 
         stage('Build images') {
-            sh 'docker-compse build'
+            steps {
+                sh 'docker-compse build'
+            }
         }
     }
 }
