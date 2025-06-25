@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Start only db'){
             steps {
-                sh 'docker-compose up -d postgres'
+                sh 'docker compose up -d postgres'
                 sh 'sleep 15'
             }
         }
