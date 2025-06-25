@@ -10,6 +10,10 @@ pipeline {
         stage('Checkout') {
             steps {
                 git 'https://github.com/MarcinCiecwierz/task-tracker.git'
+
+                sh 'git remote -v'
+                sh 'git branch -r'
+                sh 'git ls-remote'
             }
         }
 
