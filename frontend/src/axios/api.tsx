@@ -2,9 +2,10 @@ import axios from "axios";
 import { useAuth0 } from "@auth0/auth0-react";
 
 // const { getAccessTokenSilently } = useAuth0();
+const apiUrl = import.meta.env.VITE_API_URL;
 
 const api = axios.create({
-  baseURL: "http://localhost:8080/api",
+  baseURL: apiUrl,
 });
 
 // api.interceptors.request.use(async (config) => {
