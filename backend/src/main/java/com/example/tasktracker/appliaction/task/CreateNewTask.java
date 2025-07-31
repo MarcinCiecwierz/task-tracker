@@ -36,7 +36,7 @@ public class CreateNewTask {
         List<Users> usersList = usersRepository.findAllById(taskCreateRequest.getUsersIds());
 
         if(usersList.isEmpty()){
-           throw new IllegalArgumentException("Users list cannot be empty");
+           throw new IllegalArgumentException("Cannot find provided users");
         }
 
         for(Users user : usersList){
